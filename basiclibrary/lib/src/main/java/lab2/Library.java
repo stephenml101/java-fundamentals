@@ -8,3 +8,25 @@ public class Library {
         return true;
     }
 }
+    public static int[] roll(int n) {
+    /*
+    Roll a six-sided dice n times and return an array containing the values of the rolls.
+    Args:
+    n (int): The number of times to roll the dice.
+    Returns:
+    int[]: An array containing the values of the rolls.
+    */
+        // Create a Random object to generate random numbers
+        Random random = new Random();
+        // Create an array to store the values of the rolls
+        int[] rolls = new int[n];
+        // Roll the dice n times and store the values in the array
+        for (int i = 0; i < n; i++) {
+            // Generate a random number between 1 and 6 (inclusive)
+            int roll = random.nextInt(6) + 1;
+            // Store the value in the array
+            rolls[i] = roll;
+        }
+        // Return the array containing the values of the rolls
+        return rolls;
+    }
