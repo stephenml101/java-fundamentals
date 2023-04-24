@@ -75,20 +75,28 @@ public class App {
         String winner = tally(votes);
         System.out.println(winner + " received the most votes!");
     }
-    public static String tally(List<String> votes) {
+    public static String tally(List<String> names) {
         Map<String, Integer> countMap = new HashMap<>();
         int maxCount = 0;
         String winner = null;
 
-        for (String vote : votes) {
-            int count = countMap.getOrDefault(vote, 0) + 1;
-            countMap.put(vote, count);
-
-            if (count > maxCount) {
-                maxCount = count;
-                winner = vote;
-            }
+        for (int i = 0; i < votes.size(); i++){
+           if(countMap.containsKey(names.get(i))){
+               countMap.put(names.get(i), countMap.get(names.get(i))+ 1)
+           } else {
+               countMap.put(names.get(i), 1)
+           }
         }
+
+//        for (String vote : votes) {
+//            int count = countMap.getOrDefault(vote, 0) + 1;
+//            countMap.put(vote, count);
+//
+//            if (count > maxCount) {
+//                maxCount = count;
+//                winner = vote;
+//            }
+//        }
 
         return winner;
     }

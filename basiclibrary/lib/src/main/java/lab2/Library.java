@@ -3,11 +3,12 @@
  */
 package lab2;
 
+import java.util.Random;
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
-}
     public static int[] roll(int n) {
     /*
     Roll a six-sided dice n times and return an array containing the values of the rolls.
@@ -30,3 +31,7 @@ public class Library {
         // Return the array containing the values of the rolls
         return rolls;
     }
+
+}
+
+
