@@ -34,4 +34,14 @@ class LibraryTest {
         assertEquals(bestReview, actualOutput);
     }
 
+    @Test void theShop(){
+        //arrange
+        Shop theShop = new Shop("NickKnacks","Best ever!", 2 );
+        String shopify = theShop.toString();
+        //act
+        String actualOutput = theShop.toString();
+        //assert
+        assertEquals(shopify, actualOutput);
+    }
+
 }
